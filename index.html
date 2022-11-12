@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hacker Woman</title>
+    <link rel="stylesheet" href="Style/reset.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/clases.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">The Hacker<span>Woman</span></div>
+        <ul class="menu">
+          <li class="navbar-link">
+            <a class = "navbar-link" href="#Conócenos">Conócenos</a>
+        </li>
+          <li class="navbar-link">
+            <a class = "navbar-link" href="#forma parte">¿Quieres formar parte?</a>
+        </li>
+          <li class="navbar-link">
+            <a class = "navbar-link" href="#galería">Galería</a>
+        </li>
+          <li class="navbar-link">
+            <a class = "navbar-link" href="#footer">Oportunidades</a>
+        </li>
+        </ul>
+
+    </nav>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">The Hacker<span>Woman</span></h1>
+            <p class="slogan"><strong>Conoce a tu yo del futuro</strong></p>
+            <p class="text">
+                Cambia tu vida en tan sólo 3 clicks. Sólo necesitas un ordenador,
+                tiempo, y muchas ganas... ¿Te apuntas?
+            </p>
+        </div>
+    </header>
+    <main class="contenido">
+        <section id="Conócenos" class="section">
+            <h2>Conócenos</h2>
+            <p>
+                <span class="logo">The Hacker<span>Woman</span></span> es la nueva generación de <em>mujeres tech</em>, lista para revolucionar el sector.
+                Somos una comunidad de mujeres que contamos con una sobredosis de estusiasmo y fuerza para hacer este cambio realidad.
+            </p>
+        
+            <p>
+                <span class="logo">The Hacker<span>Woman</span></span> te ayudará a conseguirlo. ¿Tienes dudas? Nosotras te ayudamos. 
+                ¿No sabes ni por dón empezar? Fácil, rellena el formulario y te acompañaremos en este gran viaje.
+            </p>
+        <section id="skills" class="section">
+            <div id= "skills" class="animacion">
+                <h4>Fuerza</h4>
+                <div class="skill">
+                    <div class="skill-progress" id="skill-fuerza">
+                </div>
+                <h4>Entusiasmo </h4>
+                <div class="skill">
+                    <div class="skill-progress" id="skill-entusiasmo">       
+                </div>
+                <h4>Tiempo</h4>
+                <div class="skill">
+                    <div class="skill-progress" id="skill-tiempo">
+                </div>
+            </div>
+        </section>
+
+        <section id="forma parte" class="section">
+            <h2>¿Quieres formar parte?</h2>
+            <form action="#" id="subscribe" method="post">
+                <div class="form-container">
+                    <label for="nombre">Nombre:</label>
+                    <input required type="text" name="nombre" id="nombre" placeholder="Quién eres">
+                </div>
+                <div class="form-container">
+                    <label for="apellidos">Apellidos:</label>
+                    <input required type="text" name="apellidos" id="apellidos">
+                </div>
+
+                <div class="form-container">
+                    <label for="email">Email:</label>
+                    <input required type="email" name="email" id="email" >
+                </div>
+
+                <div class="form-container">
+                    <label for="phone">Movil:</label>
+                    <input required type="tel" name="phone" id="phone" pattern="[0-9]+" >
+                </div>
+
+                <div class="form-container">
+                    <label for="alias">Alias:</label>
+                    <input required type="text" name="alias" id="alias" pattern="^@[^\s]+" placeholder="Nombre usuario">
+                </div> 
+
+                <div class="form-container">
+                    <label for="bio">Sobre ti:</label>
+                    <textarea type="text" name="bio" id="bio" placeholder="Máximo 180 caracteres"></textarea>
+                </div>
+            <section id="forma parte" class="section">
+                <fieldset class="form-container">
+                    <legend><h2>Ayúdanos a mejorar, ¿dónde nos conociste?</h2></legend>
+
+                    <label for="keepcoding">Keepcoding</label>
+                    <input required type="radio" id="keepcoding" name="fav" value="keepcoding">
+                    
+                    <label for="universidad">Universidad</label>
+                    <input required type="radio" id="universidad" name="fav" value="universidad">
+                
+                    <label for="internet">Internet</label>
+                    <input required type="radio" id="internet" name="fav" value="internet">
+                
+                    <label for="github">En Github</label>
+                    <input required type="radio" id="github" name="fav" value="github">
+                </fieldset>
+                
+                <input type="submit" value="Enviar">
+            </section>          
+            </form>
+        </section>
+
+        <section id="galería" class="section">
+            <h2>Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Style/imágenes/aprende.jpg" width="=100px" height="100" alt="Aprende">
+                    <div class="gallery-overlay">
+                        <div class="content">
+                            <figcaption>Aprende</figcaption>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Style/imágenes/teletrabaj.jpg" width="=100px" height="100" alt="Teletrabaja">
+                        
+                    <div class="gallery-overlay">
+                        <div class="content">
+                            <figcaption>Teletrabaja</figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Style/imágenes/concilia.jpg" width="=100px" height="100" alt="Concilia">
+                    <div class="gallery-overlay">
+                        <div class="content">
+                           <figcaption>Concilia</figcaption> 
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Style/imágenes/sefeliz.jpg" width="=100px" height="100" alt="behappy">
+                    <div class="gallery-overlay">
+                        <div class="content">
+                           <figcaption>Se feliz</figcaption> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <aside class="social">
+            <h2>Oportunidades</h2>
+                <ul class="redes-sociales">
+                    <li>
+                        <a href="https://github.com/CarmenBenaventeHerrero" target="_blank">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/carmen-benavente-herrero/" target="_blank">LinkedIN</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/carbenher/?next=%2F" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </aside>
+    </footer>
+
+</body>
+</html>

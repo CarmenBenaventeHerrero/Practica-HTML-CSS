@@ -1,4 +1,4 @@
-/*Variables*/
+/*Variables y estilos*/
 :root {
     --font-size: 16px;
     --primary-color: rgb(232, 187, 127);
@@ -8,6 +8,41 @@
     --white: #fff;
 }
 
+body {
+  margin: 0 0 0 0;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--dark-color);
+
+  }
+  
+h1, h2, h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      margin-block-start: 0.80em;
+      margin-block-end: 0.80em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-block-start: 0.80em;
+  margin-block-end: 0.80em;
+
+}
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
 /*Estilos del navbar*/
 .navbar {
     display: flex;
@@ -15,7 +50,6 @@
     align-items: center;
     background-color: var(--backgournd-navs);
     font-weight: 700;
-    
 }
 .navbar .logo {
     display: flex;
@@ -28,8 +62,7 @@
 }
 
 .navbar .menu{
-    display: none;/*yo quiero que en mobile no aparezca el menú, por eso pongo none, pero con el media query voy a hacer que para determinados dispositivos no se aplique*/
-
+    display: none;
 }
 
 
@@ -45,7 +78,6 @@
         margin: 0 .15rem;   
         padding: 1rem;
         transition: color 0.7s linear;
-
     }
 
     .navbar .menu .navbar-link:hover {
@@ -55,6 +87,17 @@
 }
 
 /*Estilos del header*/
+.logo, .logo span{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 25px;    
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -64,24 +107,21 @@
     background: url('../Style/imágenes/hackerwoman.jpg') center center;
     background-size:cover;
     opacity: .9;
+
 }
 
 .header-content {
     position: absolute;
     margin: center;
+    text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
-
 }
 
 .header-content .slogan {
     text-align: center;
-    margin: 0;
-    padding: 1rem;
     font-size: 1.7rem;
     font-weight: 500;
-
 }
 
 .header-content .text {
@@ -99,48 +139,76 @@
 
 
 /*Cuerpo*/
+.contenido {
+    padding: 0 1rem;
+    font: 18px;
+    justify-content: center;
+  }
+
 .section {
     margin-top: 5vh;
 }
+
 section {
     display: block;
 }
 
-.skill-fuerza{
-    animation-name: fuerzaProgressBar;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    color: var(--light-color);
+.skill{
+    width: 100%;
+    border: 1px solid var(--dark-color);
+    margin: 1em 0 1em 0;
+    border-radius: 8px;
+    height: 1em; 
 }
-.skill-tiempo{
-    animation-name: tiempo;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    color: var(--light-color)
-}
+
 .skill-progress {
     height: 1em;
     border-radius: 8px;
     background-color: var(--primary-color)
 }
+#skill-fuerza{
+    animation-name: fuerzaProgressBar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#skill-entusiasmo{
+    animation-name: entusiasmoProgressBar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#skill-tiempo{
+    animation-name: tiempoProgressBar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
 
 @keyframes fuerzaProgressBar {
-    0% {
+    from {
         width: 0%;
         opacity: 0;
     }
-    100% {
+    to {
         width: 90%;
         opacity: 1;
     }
 }
-@keyframes tiempo {
+@keyframes entusiasmoProgressBar {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes tiempoProgressBar {
     0% {
         width: 0%;
         opacity: 0;
     }
     100% {
-        width: 50%;
+        width: 70%;
         opacity: 1;
     }
 }
@@ -168,7 +236,6 @@ form{
     border-radius: 80px;
     align-items: left;
     line-height:20px
-
 }
 
 form label{
@@ -187,7 +254,6 @@ form input[type="email"]{
 	margin: 1em auto 1em auto;
 	display:inline-block;
     border-bottom: solid 1px var(--dark-color);
-    box-sizing: border-box;
 }
 
 input + label {
@@ -204,7 +270,6 @@ textarea {
     font-family: Arial, Helvetica, sans-serif;
     font-size: .8rem;
     padding: 0.5em;
- 
 }
 
 input[type="submit"]{
@@ -220,31 +285,26 @@ input[type="submit"]{
 /*Galeria*/
 
 .gallery-grid .gallery-item img {
-     object-fit: cover;
      width: 100%;
      height: 100%;
+     opacity: .9;
  }
  
-
-  
  .gallery-item {
      position: relative;
      margin: 10px;
  }
  
- @media (min-width: 480px) {
+ @media (min-width: 280px) {
      .gallery-grid {
          display: grid;
      }
  }
  
- 
- @media (min-width: 900px) {
- 
+ @media (min-width: 780px) {
      .gallery-grid {
          grid-template-columns: repeat(4, 1fr);
      }
- 
  }
 
 
@@ -252,11 +312,9 @@ input[type="submit"]{
 .footer {
     background-color: var(--backgournd-navs);
     display: flex;
-    flex-direction: column-reverse;
-    position: sticky;
+    flex-direction: column;
     bottom: 0;
     margin-top: 5vh;
-
 }
 
 .redes-sociales {
